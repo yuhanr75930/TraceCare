@@ -1,0 +1,51 @@
+﻿@model MyTraceCare.ViewModels.AdminUserEditViewModel
+
+@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewData["Title"] = "Edit User";
+}
+
+<h2>Edit User</h2>
+
+<form method="post" asp-action="EditUser">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label>Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Role</label>
+        <select asp-for="Role" class="form-select">
+            <option value="Patient">Patient</option>
+            <option value="Clinician">Clinician</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Gender</label>
+        <select asp-for="Gender" class="form-select">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Date of Birth</label>
+        <input asp-for="DOB" class="form-control" type="date" />
+    </div>
+
+    <div class="mb-3">
+        <label>New Password (optional)</label>
+        <input asp-for="NewPassword" type="password" class="form-control" />
+    </div>
+
+    <button class="btn btn-dark">Save Changes</button>
+</form>

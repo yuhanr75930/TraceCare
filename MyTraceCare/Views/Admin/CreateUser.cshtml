@@ -1,0 +1,49 @@
+﻿@model MyTraceCare.ViewModels.AdminUserViewModel
+
+@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewData["Title"] = "Create User";
+}
+
+<h2 class="mb-3">Create User</h2>
+
+<form method="post" class="mt-3" asp-action="CreateUser">
+    <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Role</label>
+        <select asp-for="Role" class="form-select">
+            <option value="Patient">Patient</option>
+            <option value="Clinician">Clinician</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select asp-for="Gender" class="form-select">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input asp-for="DOB" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input asp-for="Password" class="form-control" type="password" />
+    </div>
+
+    <button class="btn btn-dark mt-2">Create</button>
+</form>

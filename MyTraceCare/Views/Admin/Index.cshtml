@@ -1,0 +1,37 @@
+﻿@model MyTraceCare.ViewModels.AdminDashboardStatsViewModel
+@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+            <h5>Total Users</h5>
+            <h3>@Model.TotalUsers</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+            <h5>Patients</h5>
+            <h3>@Model.TotalPatients</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+            <h5>Clinicians</h5>
+            <h3>@Model.TotalClinicians</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+            <h5>System Alerts</h5>
+            <h3>@Model.TotalAlerts</h3>
+        </div>
+    </div>
+</div>
